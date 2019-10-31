@@ -49,11 +49,13 @@
     <div class="container-fluid">
         <form>
 
-            <h3>Bandwidth Calculator</h3><br>
-            <p>This calculator can be used to compute a variety of calculations related to bandwidth, including 
-                converting between different units of data size, calculating download/upload time, calculating 
-                the amount of bandwidth a website uses, or converting between monthly data usage and its 
-                equivalent bandwidth.</p><br><br>
+            <h3>Bandwidth Calculator</h3><br><br>
+            <p>This calculator can be used to compute a variety of calculations related to bandwidth, including
+                converting between different units of data size, calculating download/upload time, calculating
+                the amount of bandwidth a website uses, or converting between monthly data usage and its
+                equivalent bandwidth.<br><br>
+                Use this calculator to estimate the bandwidth needs or actual data usage of a website.
+            </p><br><br>
 
             <div class="form-group">
                 <label for="websiteInput">Website URL</label>
@@ -71,6 +73,7 @@
 
                 <div class="col d-flex align-items-center">
                     <div class="form-group row  d-flex align-items-center col text-center">
+
                         <div class="form-check col">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="perHourRadio"
@@ -78,6 +81,7 @@
                                 Per Hour
                             </label>
                         </div>
+
                         <div class="form-check col">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="perDayRadio"
@@ -85,6 +89,7 @@
                                 Per Day
                             </label>
                         </div>
+
                         <div class="form-check col">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="perWeekRadio"
@@ -92,6 +97,7 @@
                                 Per Week
                             </label>
                         </div>
+
                         <div class="form-check col">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="perMonthRadio"
@@ -99,6 +105,7 @@
                                 Per Month
                             </label>
                         </div>
+
                     </div>
                 </div>
 
@@ -107,6 +114,61 @@
             <button type="submit" class="btn btn-success w-100 mt-4">Calculate My Website's Bandwidth</button>
 
         </form>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row border">
+            
+            <div class="col-md-6 text-center d-flex align-items-center">
+                <div class="m-auto">
+                    <p id="bandwidth-text">The bandwidth your website need is</p>
+                    <h1 id="bandwidth" class="inline">6.7455</h1>
+                    <h3 class="inline"> GB</h3>
+                    <h3>PER MONTH</h3>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+                <h5>
+                    <p></p>
+                </h5>
+
+                <div class="list-group">
+                    <h5 class="list-group-item py-3">Sitemap Preview</h5>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Cras justo odio
+                    </a>
+                    <a href="https://www.google.com" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus
+                    </a>
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>

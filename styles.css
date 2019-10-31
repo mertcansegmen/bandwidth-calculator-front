@@ -1,3 +1,27 @@
+.inline {
+    display: inline;
+}
+
 .container-fluid {
     padding: 5% 20%;
+}
+
+#bandwidth {
+    font-size: 60px;
+}
+
+#bandwidth-text {
+    font-size: 20px;
+}
+
+.list-group{
+    max-height: 500px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.border {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
