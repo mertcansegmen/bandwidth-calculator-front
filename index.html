@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- <link rel="stylesheet" href='https://bootswatch.com/4/lux/bootstrap.min.css'> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" href='/lux.css'>
     <link rel="stylesheet" href='/styles.css'>
     <title>Bandwidth Calculator</title>
 </head>
 
 <body>
+
+    <!-- Nav Bar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Bandwidth Calculator</a>
@@ -46,14 +44,22 @@
         </div> -->
     </nav>
 
-    <div class="container-fluid" id="main-content">
+    <!-- Loading Spinner -->
+    
+    <div class="w-50 text-center" id="spinner">
+        <p style="font-size: 30px;">Calculating Bandwidth...</p>
+        <div class="spinner-grow text-success" style="width: 5rem; height: 5rem;" role="status"></div>
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="container" id="main-content">
+
         <form>
 
             <h3>Bandwidth Calculator</h3><br><br>
-            <p>This calculator can be used to compute a variety of calculations related to bandwidth, including
-                converting between different units of data size, calculating download/upload time, calculating
-                the amount of bandwidth a website uses, or converting between monthly data usage and its
-                equivalent bandwidth.<br><br>
+            <p>Bandwidth Calculator is a web app that allows you to calculate how much bandwidth your website
+                will need when it is deployed on a server.<br><br>
                 Use this calculator to estimate the bandwidth needs or actual data usage of a website.
             </p><br><br>
 
@@ -72,7 +78,7 @@
                 </div>
 
                 <div class="col d-flex align-items-center">
-                    <div class="form-group row  d-flex align-items-center col text-center">
+                    <div class="form-group row d-flex align-items-center col text-center">
 
                         <div class="form-check col">
                             <label class="form-check-label">
@@ -111,14 +117,17 @@
 
             </div>
 
-            <button type="button" class="btn btn-success w-100 mt-4" id="calculateButton">Calculate My Website's Bandwidth</button>
+            <button type="button" class="btn btn-success w-100 mt-4" id="calculateButton">Calculate My Website's
+                Bandwidth</button>
 
         </form>
     </div>
 
-    <div class="container-fluid" id="result-content">
+    <!-- Result Content -->
+
+    <div class="container" id="result-content">
         <div class="row border p-4">
-            
+
             <div class="col-md-6 text-center d-flex align-items-center">
                 <div class="m-auto">
                     <p id="bandwidth-text">The bandwidth your website need is</p>
@@ -139,7 +148,8 @@
 
                 </div>
             </div>
-            <button type="button" class="btn btn-success w-100 mt-4" id="calculateAgainButton">Calculate Bandwidth For Another Website</button>
+            <button type="button" class="btn btn-success w-100 mt-4" id="calculateAgainButton">Calculate Bandwidth For
+                Another Website</button>
         </div>
     </div>
 

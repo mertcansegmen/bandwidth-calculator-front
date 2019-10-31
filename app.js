@@ -46,10 +46,13 @@ const resultContentUI = document.querySelector("#result-content");
 const siteMapListUI = document.querySelector(".list-group");
 const calculateButtonUI = document.querySelector("#calculateButton");
 const calculateAgainButtonUI = document.querySelector("#calculateAgainButton");
+const spinnerUI = document.querySelector("#spinner");
+const urlInputUI = document.querySelector("#websiteUrlInput");
+const pageViewsInputUI = document.querySelector("#pageViewsInput");
 
 calculateButtonUI.addEventListener("click", function () {
-    const url = document.querySelector("#websiteUrlInput").value;
-    const pageViews = document.querySelector("#pageViewsInput");
+    const url = urlInputUI.value;
+    const pageViews = pageViewsInputUI.value;
     const frequency = function () {
         if (document.querySelector("#perHourRadio").checked) {
             return "hour";
@@ -62,15 +65,23 @@ calculateButtonUI.addEventListener("click", function () {
         }
     };
 
+    spinnerUI.style.display = "block"
+    mainContentUI.style.transition = "opacity 1s ease";
+    mainContentUI.style.opacity = 0;
+    setTimeout(function() {
+        mainContentUI.style.display = "none";
+    }, 1000);
+
     dataFetcher.getResults(url, pageViews, frequency)
         .then(result => {
             resultContentUI.style.display = "block";
             mainContentUI.style.display = "none";
+            spinnerUI.style.display = "none"
 
             document.querySelector("#bandwidth-value").innerHTML = result.bandwidth;
 
             result.sitemap.forEach((siteUrl) => {
-                var listElement = document.createElement("a");
+                let listElement = document.createElement("a");
                 listElement.setAttribute("class", "list-group-item list-group-item-action");
                 listElement.setAttribute("target", "_blank");
                 listElement.setAttribute("href", siteUrl);
@@ -83,4 +94,5 @@ calculateButtonUI.addEventListener("click", function () {
 calculateAgainButtonUI.addEventListener("click", function() {
     resultContentUI.style.display = "none";
     mainContentUI.style.display = "block";
+    mainContentUI.style.opacity = 1;
 });

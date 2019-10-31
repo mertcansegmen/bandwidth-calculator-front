@@ -1,5 +1,5 @@
-.container-fluid {
-    padding: 5% 20%;
+.container {
+    padding: 100px 0;
 }
 
 #bandwidth-value {
@@ -10,10 +10,10 @@
     font-size: 20px;
 }
 
-.list-group{
+.list-group {
     max-height: 500px;
     margin-bottom: 10px;
-    overflow:scroll;
+    overflow: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -28,4 +28,18 @@
 
 #result-content {
     display: none;
+}
+
+#spinner{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: visible;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
