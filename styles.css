@@ -1,12 +1,8 @@
-.inline {
-    display: inline;
-}
-
 .container-fluid {
     padding: 5% 20%;
 }
 
-#bandwidth {
+#bandwidth-value {
     font-size: 60px;
 }
 
@@ -24,4 +20,12 @@
 .border {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+}
+
+.inline {
+    display: inline;
+}
+
+#result-content {
+    display: none;
 }
