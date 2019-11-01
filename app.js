@@ -95,4 +95,5 @@ calculateAgainButtonUI.addEventListener("click", function() {
     resultContentUI.style.display = "none";
     mainContentUI.style.display = "block";
     mainContentUI.style.opacity = 1;
+    siteMapListUI.innerHTML = "";
 });
