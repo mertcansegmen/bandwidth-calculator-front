@@ -47,8 +47,9 @@ const siteMapListUI = document.querySelector(".list-group");
 const calculateButtonUI = document.querySelector("#calculateButton");
 const calculateAgainButtonUI = document.querySelector("#calculateAgainButton");
 const spinnerUI = document.querySelector("#spinner");
-const urlInputUI = document.querySelector("#websiteUrlInput");
 const pageViewsInputUI = document.querySelector("#pageViewsInput");
+const urlInputUI = document.querySelector("#websiteUrlInput");
+const urlInputFormGroupUI = document.querySelector("#url-input-form-group");
 
 calculateButtonUI.addEventListener("click", function () {
     const url = urlInputUI.value;
@@ -64,6 +65,18 @@ calculateButtonUI.addEventListener("click", function () {
             return "month";
         }
     };
+
+    if(url == "") {
+        if(urlInputUI.classList.contains("is-invalid")) {
+            return;
+        }
+        let invalidFeedback = document.createElement("div");
+        invalidFeedback.setAttribute("class", "invalid-feedback");
+        invalidFeedback.innerHTML = "URL can not be empty";
+        urlInputFormGroupUI.appendChild(invalidFeedback);
+        urlInputUI.className += " is-invalid";
+        return;
+    }
 
     spinnerUI.style.display = "block"
     mainContentUI.style.transition = "opacity 1s ease";
@@ -96,4 +109,12 @@ calculateAgainButtonUI.addEventListener("click", function() {
     mainContentUI.style.display = "block";
     mainContentUI.style.opacity = 1;
     siteMapListUI.innerHTML = "";
+});
+
+urlInputUI.addEventListener("click", () => {
+    if(urlInputUI.classList.contains("is-invalid")) {
+        let invalidFeedback = document.querySelector(".invalid-feedback");
+        invalidFeedback.parentNode.removeChild(invalidFeedback);
+        urlInputUI.classList.remove("is-invalid");
+    }
 });
